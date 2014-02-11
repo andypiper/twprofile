@@ -2,11 +2,12 @@
 	  "name": "twprofile",
 	  "version": "0.1.0",
 	  "description": "A Twitter API demo",
-	  "main": "index.js",
+	  "main": "twprofile",
 		"keywords": [
 			          "twitter"
 		],
 		"dependencies": {
-		"twitter-ng": "~0.6.2"
+		"twitter-ng": "~0.6.2",
+		"nopt": ""
 	  }
 }

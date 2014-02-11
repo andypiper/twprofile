@@ -1,3 +1,8 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var nopt = require('nopt');
 var twitter = require('twitter-ng');
 var settingsFile = "./settings";
 var settings = require(settingsFile);
@@ -9,8 +14,12 @@ var twit = new twitter({
   access_token_secret: settings.access_token_secret
 });
 
+var opts = nopt({});
+
+var user = opts.argv.remain[0]
+
 twit.getUserTimeline({
-  screen_name: "andypiper",
+  screen_name: user,
   trim_user: 0,
   since_id: 1
 }, function(err, cb) {
